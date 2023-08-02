@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signup Page</title>
+    <!-- Add your Firebase configuration script here -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="firebase-config.js"></script>
+    <!-- Add your CSS file link here -->
+    <style>
+        .saylani{
+            color: #61B846;
+        font-family: Inter;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 25px; /* 71.429% */
+        text-align: center;
+        }
+        .place{
+            color: #024F9D;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25px; /* 125% */
+        text-align: center;
+        }
+        input[type="text"], input[type="number"], input[type="email"] ,input[type="password"], textarea {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+ 
+  margin-left: 500px;
+  margin-top:40px;
+  
+                
+}
+
+
+    </style>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+
+
+   <div class="container">
+        <h1 class="saylani">SAYLANI WELFARE</h1>
+        <h2 class="place">
+            ONLINE MARKET PLACE
+        </h2>
+        
+            
+        
+        <form  id="signupForm" onsubmit="signup(event)">
+       
+            <div class="icon-input">
+               
+                <input type="text" id="username" placeholder="User Name" required>
+                <img src="/images/User name icon.png">
+                
+                
+            </div>
+           
+            <div class="icon-input">
+                
+                <input type="email" id="email" placeholder=" Email" required>
+                <img src="./images/Email icon.png">
+                
+                
+            </div>
+            
+            <div class="icon-input">
+            
+                <input type="password" id="password" placeholder="Password" required>
+                <img src="/images/Password icon.png">
+            </div>
+              <!-- Add the "Forgot Password" link -->
+        <div style="margin-left: 500px;">
+            <p>Forgot Password? <a style="text-decoration: none;" href="#" onclick="forgotPassword()">Click here</a></p>
+        </div>
+            <div style="margin-left: 500px;margin-top: 30px;">
+                <input type="radio" name="option" value="sales" id="salesRadio" required>
+                <label style="font-size: larger;" for="salesRadio">Sales</label>
+                <input style="margin-left: 28px" type="radio" name="option" value="purchase" id="purchaseRadio" required>
+                <label style="font-size: larger;" for="purchaseRadio">Purchase</label>
+            </div>
+            
+            
+          <div class="div4">
+            <button  style="margin-left:500px;margin-top: 18px;width: 200px;
+            height: 40px;
+            flex-shrink: 0;border-radius: 15px;
+background: #61B846;
+box-shadow: 0px 4px 4px 5px #D4D3D3;font-size: larger;" type="submit">
+                Sign In</button>
+        </div>
+        </form>
+        <p id="message"></p>
+    </div>
+    <!-- Add your JavaScript file link here -->
+    <script src="./signin.js"></script>
+</body>
+
+</html>
